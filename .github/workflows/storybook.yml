@@ -17,5 +17,5 @@ jobs:
           git config --global user.email "gina@example.com"
           git config --global user.name "Gina"
           git init && git remote add origin https://mwilshirejones:${{secrets.ACCESS_TOKEN}}@github.com/mwilshirejones/test-pinata-storybook
-          git add . && git commit -m 'Deploy from Pinata' && git push --force origin master
+          git add . && git commit -m 'Deploy from Pinata' && git push --force origin main
 
