@@ -1,0 +1,18 @@
+name: 'Storybook — Build & Deploy'
+
+on:
+  workflow_dispatch
+  push
+
+jobs:
+  deploy:
+    name: 'Build + Deploy'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to pinata-storybook
+        run: |
+          mkdir storybook-static
+          cd storybook-static
+          git init && git remote add origin https://mwilshirejones:${{secrets.ACCESS_TOKEN}}@github.com/mwilshirejones/test-pinata-storybook
+          git add . && git commit -m 'Deploy from Pinata' && git push --force origin master
+
