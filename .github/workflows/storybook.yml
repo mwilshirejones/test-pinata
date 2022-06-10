@@ -22,6 +22,8 @@ jobs:
           git add .
           git status
           git commit -m 'Deploy from Pinata'
-          git  status
+          git status
+          git fetch
+          git status
           git push origin gh-pages -f
 
