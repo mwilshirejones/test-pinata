@@ -11,11 +11,9 @@ jobs:
     steps:
       - name: Deploy to pinata-storybook
         run: |
-          mkdir storybook-static
-          cd storybook-static
+          mkdir -p docs && cd docs
           echo "world" >> hello.txt
           git config --global user.email "gina@example.com"
           git config --global user.name "Gina"
-          git init --initial-branch=main && git remote add origin https://mwilshirejones:${{secrets.ACCESS_TOKEN}}@github.com/mwilshirejones/test-pinata-storybook
-          git add . && git commit -m 'Deploy from Pinata' && git push --force origin main
+          git add . && git commit -m 'Deploy from Pinata' && git push --force origin gh-pages
 
