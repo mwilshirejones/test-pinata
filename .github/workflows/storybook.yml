@@ -19,5 +19,5 @@ jobs:
           git config --global user.email "gina@example.com"
           git config --global user.name "Gina"
           git fetch
-          git add . && git commit -m 'Deploy from Pinata' && git push --force origin/gh-pages
+          git add . && git commit -m 'Deploy from Pinata' && git push --force origin gh-pages
 
